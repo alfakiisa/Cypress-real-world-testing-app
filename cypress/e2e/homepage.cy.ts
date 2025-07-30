@@ -32,5 +32,13 @@ describe('homepage', () => {
     cy.location("pathname").should("eq", "/cypress-fundamentals");
   })
   })
+
+  context("footer section", () => {
+    it("Footer contains correct text", () => {
+      cy.get('[data-test="footer-text"]')
+        .should('exist')
+        .contains('© 2023 Testing Next.js Applications with Cypress');
+    })
+  })
   
 })
